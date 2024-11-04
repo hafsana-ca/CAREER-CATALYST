@@ -1,0 +1,102 @@
+{% include 'adminheader.html' %}
+<br><br><br><br><br>
+
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+  <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+
+    <div class="carousel-inner" role="listbox">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active" style="background-image: url(https://img.freepik.com/free-photo/abstract-blur-hotel-interior_1203-8529.jpg?w=740&t=st=1704906178~exp=1704906778~hmac=fa4832338786c8a3b4ed4f5678986d5b1c2d78bdf8eb4b55960962435d3ec30b)">
+        <div class="carousel-container">
+          <div class="container">
+            <h2 class="animate__animated animate__fadeInDown"><span>JOB VACCANCIES</span></h2>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+
+
+  </div>
+</section>
+<br><br>
+
+
+<!-- <h1 align="center">JOB VACCANCIES</h1> -->
+    <!-- <table class="table" style="margin-top: 100px;">
+        <thead class="table-dark">
+    
+        <tr>
+            <th>Job Title</th>
+            <th>Job Description</th>
+            <th>Skills</th>
+            
+        </tr>
+        </thead>
+        {% for i in data['view'] %}
+        <tr>
+            <td>{{i['job_title']}}</td>
+            <td>{{i['job_description']}}</td>
+            <td>{{i['skills']}}</td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+    <br><br><br><br><br>-->
+
+<div class="container" style="margin-top: 100px;">
+    <div class="row">
+      {% for i in data['view'] %}
+        <div class="col-md-4">
+          <div class="card">
+            <div><center><img src="https://cdn-icons-png.flaticon.com/256/6427/6427283.png" alt="" width="150px" height="150px"></div></center>
+            <div class="card-header">
+              {{i['job_title']}} 
+            </div>
+            <div class="card-body">
+              <p><strong>Job Description:</strong> {{i['job_description']}}</p>
+              <p><strong>Skills:</strong> {{i['skills']}}</p>
+              
+               <!-- {% if i['usertype'] == 'pending' %}
+                <a class="btn btn-success" href="?action=approve&id={{i['Login_id']}}">Approve</a>
+                <a class="btn btn-danger" href="?action=reject&id={{i['Login_id']}}">Reject</a>
+              {% else %}
+                <span class="badge badge-success">Approved</span>
+              {% endif %}  -->
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <style>
+    .card{
+      border: 2px solid #0a0808;
+      border-radius: 10px;
+      padding: 5px;
+      width: 360px;
+      margin: 50px;
+    }
+    .card-header{
+      border: 2px solid #070707;
+      border-radius: 10px;
+      padding: 10px;
+      width: 300px;
+      margin: 10px;
+    }
+  </style>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+</body>
+</table>
+
+
+{%include 'public_footer.html' %}
+

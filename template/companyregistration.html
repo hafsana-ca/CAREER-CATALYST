@@ -1,0 +1,68 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> -->
+    {%include 'public_header.html' %}
+   
+    <br><br><br><br>
+    <!-- <body style="background-image: url(https://images.pexels.com/photos/2740956/pexels-photo-2740956.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); background-repeat: no-repeat;"> -->
+        
+    </body>
+    <h1 align="center" style="color: rgb(250, 250, 249); text-shadow: 2px 2px black;"> COMPANY REGISTRATION FORM</h1>
+    <form action="" method="post">
+        <table style="margin-top: 50px;" align="center">
+            <tr>
+                <!-- <th>COMPANY NAME</th> -->
+                <td><input type="text" name="cname" class="form-control" placeholder="Company Name"></td>
+            </tr>
+            <tr>
+                <!-- <th>PLACE</th> -->
+                <td><input type="text" name="place" class="form-control" placeholder="Place"></td>
+            </tr>
+            <tr>
+                <!-- <th>PHONE</th> -->
+                <td><input type="text" name="phone" class="form-control" placeholder="Phone"></td>
+            </tr>
+            <tr>
+                <!-- <th>EMAIL</th> -->
+                <td><input type="text" name="email" class="form-control" placeholder="Email"></td>
+            </tr>
+            <tr>
+                <!-- <th>ABOUT COMPANY</th> -->
+                <td><textarea name="abtcompany"  cols="35" rows="8" class="form-control" placeholder="About Company"></textarea>
+            </tr>
+            <tr>
+                <!-- <th>COMPANY LICENSE</th> -->
+                <td><input type="text" name="licenseno" class="form-control" placeholder="Company License Number"></td>
+            </tr>
+            <tr>
+                <!-- <th>USERNAME</th> -->
+                <td><input type="text" name="uname" class="form-control" placeholder="UserName"></td>
+            </tr>
+            <tr>
+                <!-- <th>PASSWORD</th> -->
+                <td><input type="password" name="pwd" class="form-control" placeholder="Password"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="register" name="register"  class="btn btn-success" name="log"></td>
+            </tr>
+        </table>
+    </form>
+    <br><br><br>
+<!-- </body>
+</html> -->
+{%include 'public_footer.html' %}
+
+<style>
+    th,td{
+        color:black;
+
+    }
+    td{
+        padding: 10px;
+    }
+</style>

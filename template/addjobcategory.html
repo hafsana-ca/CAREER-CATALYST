@@ -1,0 +1,258 @@
+{% include 'adminheader.html' %}
+<br><br><br><br>
+
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  
+    
+  
+      <div class="carousel-inner" role="listbox">
+  
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url(https://img.freepik.com/free-photo/abstract-blur-hotel-interior_1203-8529.jpg?w=740&t=st=1704906178~exp=1704906778~hmac=fa4832338786c8a3b4ed4f5678986d5b1c2d78bdf8eb4b55960962435d3ec30b)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown"><span>JOB CATEGORIES</span></h2>
+            </div>
+          </div>
+        </div>
+  
+        
+  
+        
+      </div>
+  
+  
+    </div>
+  </section>
+  <br><br><br><br><br>
+     
+
+
+ <form action="" method="post">
+    
+    <h1 align="center"></h1>
+  
+    <table align="center">  <br><br>  
+            <tr>
+                
+                <td><input type="text" name="jbname" style="padding: 10px 15px; border-radius:8px" placeholder="Job Category"></td>
+            </tr>
+            <tr>
+                <td align="center"><br><input type="submit"  class="form-control" style="background-color: rgb(175, 153, 164);" value="ADD" name="submit"></td>
+            </tr>
+        </table>
+        </form>
+         <table class="table" align="center" style="margin-top: 100px;width: 400px;">
+            <thead class="table-dark">
+        <tr>
+            <th align="center">JOB CATEGORY NAME</th>
+        </tr>
+        </thead>
+
+        {% for i in data['view'] %}
+
+        <tr>
+            <td>{{i['job_category_name']}}</td>
+            
+
+        </tr>
+       
+        {% endfor %}
+
+    </table>
+    <br><br><br><br> 
+
+
+    <!-- <html lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <title>job categories</title>
+        <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+      </head>
+      
+      <body>
+      <div class="table-title">
+      <h3>JOB CATEGORIES</h3>
+      </div>
+      <table class="table-fill">
+      <thead>
+      <tr>
+      <th class="text-left">Month</th>
+      <th class="text-left">Sales</th>
+      </tr>
+      </thead>
+      <tbody class="table-hover">
+      <tr>
+      <td class="text-left">January</td>
+      <td class="text-left">$ 50,000.00</td>
+      </tr>
+      <tr>
+      <td class="text-left">February</td>
+      <td class="text-left">$ 10,000.00</td>
+      </tr>
+      <tr>
+      <td class="text-left">March</td>
+      <td class="text-left">$ 85,000.00</td>
+      </tr>
+      <tr>
+      <td class="text-left">April</td>
+      <td class="text-left">$ 56,000.00</td>
+      </tr>
+      <tr>
+      <td class="text-left">May</td>
+      <td class="text-left">$ 98,000.00</td>
+      </tr>
+      </tbody>
+      </table> -->
+      
+
+      <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+
+body {
+  background-color: #fcfbfb;
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
+div.table-title {
+   display: block;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+}
+
+.table-title h3 {
+   color: #fafafa;
+   font-size: 30px;
+   font-weight: 400;
+   font-style:normal;
+   font-family: "Roboto", helvetica, arial, sans-serif;
+   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+   text-transform:uppercase;
+}
+
+
+/*** Table Styles **/
+
+.table-fill {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 320px;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+ 
+th {
+  color:#D5DDE5;
+  background:#1b1e24;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size:23px;
+  font-weight: 100;
+  padding:24px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+th:first-child {
+  border-top-left-radius:3px;
+}
+ 
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+  
+tr {
+  border-top: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+ 
+tr:hover td {
+  background:#a5a8c5;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+}
+ 
+tr:first-child {
+  border-top:none;
+}
+
+tr:last-child {
+  border-bottom:none;
+}
+ 
+tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+ 
+tr:nth-child(odd):hover td {
+  background:#4E5066;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+ 
+tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+ 
+td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+
+td:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
+}
+
+      </style>  
+        <!-- </body>
+      </html>  -->
+<br><br>
+{% include 'footer.html' %}

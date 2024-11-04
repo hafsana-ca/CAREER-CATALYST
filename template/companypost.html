@@ -1,0 +1,252 @@
+{% include 'companyheader.html' %}
+
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  
+  
+      <div class="carousel-inner" role="listbox">
+  
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url(https://images.pexels.com/photos/7014337/pexels-photo-7014337.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown"><span>COMPANY POSTS / EVENTS</span></h2>
+            </div>
+          </div>
+        </div>
+  
+        
+  
+        
+      </div>
+  
+  
+    </div>
+  </section>
+  <br><br>
+
+  <form action="" method="post" enctype="multipart/form-data">
+    <table align="center">
+        <tr>
+            
+            <td><br><input  type="text" name="title"  style="padding: 10px 15px; border-radius:8px"   placeholder="Title"></td>
+        </tr>
+        <tr>
+            
+          <td><br><input  type="url" name="link"  style="padding: 10px 15px; border-radius:8px"   placeholder="Link"></td>
+      </tr>
+        <tr>
+            
+            <td><br><input type="file" name="post" style="padding: 10px 15px; border-radius:8px" placeholder="Post" class="form-control"></td>
+        </tr>
+        <tr>
+            
+            <td><br>
+            <select name="posttype" style="padding: 10px 15px; border-radius:8px">
+                <option value="">SELECT POST TYPE</option>
+                <option value="blog" name="blog">BLOG</option>
+                <option value="video" name="video">VIDEO</option>
+                <option value="webinar" name="webinar">WEBINAR</option>
+            </select></td>
+        </tr>
+        <!-- <tr>
+            
+            <td><br><input type="text" name="date" style="padding: 10px 15px; border-radius:8px" placeholder="Date"></td>
+        </tr> -->
+        <tr>
+            <td align="center" ><br><input type="submit" class="form-control" style="background-color: rgb(175, 153, 164);" value="OK" name="submit"></td>
+        </tr>
+    </table>
+</form>
+
+
+<div class="container" style="margin-top: 100px;">
+  <div class="row">
+    {% for i in data['view'] %}
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">
+            {{i['company_name']}} 
+          </div>
+          <div class="card-body">
+            <p><strong>Title :</strong> {{i['title']}}</p>
+
+            {% if i['post_type']=='webinar' %}
+            <p><strong>Link:</strong><a href="{{i['link']}}">Click here to open</a></p>
+            {% endif %}
+            {% if i['post_type']=='blog' %}
+            <p><strong>Link:</strong><a href="/viewcompanyblog?id={{i['company_post_id']}}">Click here to write</a></p>
+            {% endif %}
+
+            {% if i['post_type'] == "video" %}
+              <p>
+                <video width="240" height="200" controls>
+                  <source src="/{{i['post']}}" type="video/mp4">
+                  
+                </video>
+              </p>
+            {% else %}
+            <p><a href="{{i['post']}}"><img src="/{{i['post']}}" alt="Image" style="width: 200px;"></a></p>
+            <!-- <p><strong>Post:</strong><a href="{{i['post']}}">View</a></p> -->
+            {% endif %}
+              
+            <p><strong>Post Type:</strong> {{i['post_type']}}</p>
+           
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .card{
+    border: 2px solid #0a0808;
+    border-radius: 10px;
+    padding: 5px;
+    width: 300px;
+    margin: 50px;
+  }
+  
+  body {
+    background-color: #fcfbfb;
+    font-family: "Roboto", helvetica, arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    }
+    
+    div.table-title {
+     display: block;
+    margin: auto;
+    max-width: 600px;
+    padding:5px;
+    width: 100%;
+    }
+    .table-title h3 {
+      color: #fafafa;
+      font-size: 30px;
+      font-weight: 400;
+      font-style:normal;
+      font-family: "Roboto", helvetica, arial, sans-serif;
+      text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+      text-transform:uppercase;
+    }
+    .table-fill {
+      background: white;
+      border-radius:3px;
+      border-collapse: collapse;
+      height: 320px;
+      margin: auto;
+      max-width: 600px;
+      padding:5px;
+      width: 100%;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+     
+    th {
+      color:#D5DDE5;
+      background:#1b1e24;
+      border-bottom:4px solid #9ea7af;
+      border-right: 1px solid #343a45;
+      font-size:23px;
+      font-weight: 100;
+      padding:24px;
+      text-align:left;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+      vertical-align:middle;
+    }
+    
+    th:first-child {
+      border-top-left-radius:3px;
+    }
+     
+    th:last-child {
+      border-top-right-radius:3px;
+      border-right:none;
+    }
+      
+    tr {
+      border-top: 1px solid #C1C3D1;
+      color:#666B85;
+      font-size:16px;
+      font-weight:normal;
+      text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+    }
+     
+    tr:hover td {
+      background:#a5a8c5;
+      color:#FFFFFF;
+      border-top: 1px solid #22262e;
+    }
+     
+    tr:first-child {
+      border-top:none;
+    }
+    
+    tr:last-child {
+      border-bottom:none;
+    }
+     
+    tr:nth-child(odd) td {
+      background:#EBEBEB;
+    }
+     
+    tr:nth-child(odd):hover td {
+      background:#4E5066;
+    }
+    
+    tr:last-child td:first-child {
+      border-bottom-left-radius:3px;
+    }
+     
+    tr:last-child td:last-child {
+      border-bottom-right-radius:3px;
+    }
+     
+    td {
+      background:#FFFFFF;
+      padding:20px;
+      text-align:left;
+      vertical-align:middle;
+      font-weight:300;
+      font-size:18px;
+      text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+      border-right: 1px solid #C1C3D1;
+    }
+    
+    td:last-child {
+      border-right: 0px;
+    }
+    
+    th.text-left {
+      text-align: left;
+    }
+    
+    th.text-center {
+      text-align: center;
+    }
+    
+    th.text-right {
+      text-align: right;
+    }
+    
+    td.text-left {
+      text-align: left;
+    }
+    
+    td.text-center {
+      text-align: center;
+    }
+    
+    td.text-right {
+      text-align: right;
+    }
+    
+          </style> 
+
+
+
+<br><br>
+{%include 'public_footer.html' %}

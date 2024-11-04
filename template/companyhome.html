@@ -1,0 +1,275 @@
+{% include 'companyheader.html' %}
+<br><br>
+<br><br><br><br>
+<h1 align="center" >
+  <!-- <p style="margin-right: 50px;"><br><br><span style="color: rgb(17, 17, 17); font-weight: bold;">"UNLOCKING THE GATEWAY <br> TO YOUR FUTURE"</span> -->
+  </p>
+</h1>
+
+<body>
+  
+
+<ul class="tabs">
+  <li class="active" data-id="0">Jobs</li>
+  <li data-id="1">Internships</li>
+  <li data-id="2">Doubt Clearence</li>
+  <li data-id="3">Blogosphere</li>
+</ul>
+
+<div class="contents">
+
+  <div class="box show" data-content="0">
+      <img src="https://images.pexels.com/photos/4344860/pexels-photo-4344860.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+      <div>
+          <h3>Diverse Array of Job Opportunities</h3>
+          <p>
+            Our platform is proud to offer a wide range of job opportunities, catering to diverse
+            skill sets and career aspirations. Whether you're seeking a creative role in design,
+            a technical position in engineering, or a leadership opportunity in management, 
+            our platform has something for everyone.  <br>
+
+            Join us today and explore the diverse array of opportunities waiting for you.
+          </p>
+      </div>
+  </div>
+
+  <div class="box hide" data-content="1">
+      <img src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg" alt="">
+      <div>
+          <h3>Internships Across A Spectrum Of Industries</h3>
+          <p>
+            We takes pride in offering a wide array of internship opportunities
+            spanning diverse industries.  We connect
+            aspiring professionals with hands-on learning experiences that enrich their skill sets
+            and pave the way for future career success. <br>  With us, interns can explore their interests,  and build a strong 
+            foundation for their professional journey.  <br>
+            Join us today and embark on a rewarding internship experience that will shape your future.
+          </p>
+      </div>
+  </div>
+
+  <div class="box hide" data-content="2">
+      <img src="https://images.pexels.com/photos/6347902/pexels-photo-6347902.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+      <div>
+          <h3>A Hub For Individuals To Clarify Their Doubts And Gain Clarity</h3>
+          <p>
+            At our company, we pride ourselves on being more than just a service provider; we're your trusted partner
+             in clearing doubts and providing clarity. <br> Whether it's clarifying concepts
+            in academics, understanding complex issues in the workplace, or seeking guidance on personal matters, 
+            our platform provides a supportive environment for knowledge exchange and growth. <br> Through interactive 
+            discussions, expert advice, and access to a wealth of resources, users can expand their knowledge base, 
+            build confidence, and make informed decisions. <br>
+            Join our platform today and embark on a journey of continuous learning and enlightenment.
+
+
+          </p>
+      </div>
+  </div>
+
+  <div class="box hide" data-content="3">
+      <img src="https://images.pexels.com/photos/789822/pexels-photo-789822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+      <div>
+          <h3>Stay Informed Through Web Contents </h3>
+          <p>
+            We are dedicated to keeping you informed about career-related industry trends through 
+            a variety of engaging and informative blogs and video content. Whether you're exploring new career
+             paths, seeking advice on advancing in your current field, or staying updated on the latest developments, 
+             our platform offers valuable insights and practical tips to help you navigate the ever-evolving job market. <br>
+             Our curated selection of blogs and videos cover a wide range of industries and topics, providing you
+              with the knowledge and resources you need to stay ahead in your career. 
+              <br>Join us today and stay informed about the trends shaping the future of work.
+          </p>
+      </div>
+  </div>
+
+</div>
+
+
+</body>
+
+<style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  
+  body {
+      background-color: #e9b5bc;
+      overflow-x: clip;
+  }
+  
+  ul {
+      list-style: none;
+  }
+  
+  .tabs {
+      width: 80%;
+      height: 100px;
+      margin: auto;
+      margin-top: 50px;
+      display: flex;
+      align-items: center;
+     
+      overflow: hidden;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+  }
+  
+  .tabs li {
+      background-color: #faf8f8;
+      width: 25%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0f0f0f;
+      font-family: 'Poppins', sans-serif;
+      transition: .5s;
+      -webkit-transition: .5s;
+      -moz-transition: .5s;
+      -ms-transition: .5s;
+      -o-transition: .5s;
+      cursor: pointer;
+  }
+  
+  .tabs li:hover {
+      background: linear-gradient(145deg, #faf8f8, #da8b8b);
+      
+      color: #f9004d;
+      position: relative;
+      z-index: 1;
+      border-radius: 10px;
+  }
+  
+  .active {
+      background: linear-gradient(145deg, #faf8f8, #da8b8b);
+     
+      color: #fcf8f9 !important;
+      position: relative;
+      z-index: 1;
+      border-radius: 10px;
+  }
+  
+  .contents {
+      width: 80%;
+      margin: auto;
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+  }
+  
+  .box {
+      gap: 20px;
+      background: linear-gradient(145deg, #fbfcfd, #fcfdfd);
+      box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      padding: 30px;
+      width: 150%;
+      animation: moving 1s ease;
+      -webkit-animation: moving 1s ease;
+  }
+  
+  .box img {
+      width: 50%;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+  }
+  
+  .box h3 {
+      color: #080808;
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 20px;
+  }
+  
+  .box p {
+      
+      opacity: .5;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+  }
+  
+  .show {
+      display: flex;
+  }
+  
+  .hide {
+      display: none;
+  }
+  
+  @keyframes moving {
+      from {
+          transform: translateX(-50px);
+          -webkit-transform: translateX(-50px);
+          -moz-transform: translateX(-50px);
+          -ms-transform: translateX(-50px);
+          -o-transform: translateX(-50px);
+          opacity: 0;
+      }
+  
+      to {
+          transform: translateX(0px);
+          -webkit-transform: translateX(0px);
+          -moz-transform: translateX(0px);
+          -ms-transform: translateX(0px);
+          -o-transform: translateX(0px);
+          opacity: 1;
+      }
+  }
+</style>
+<!-- <style>
+  body {
+    background-image: url(https://img.freepik.com/free-vector/abstract-background-with-pastel-coloured-low-poly-design_1048-14869.jpg?w=740&t=st=1707751623~exp=1707752223~hmac=9c2df6f17695a083072d9c3ebfbfb9702a88b90c3fa0da4132974db89c2f1061);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    color: rgb(5, 5, 5);
+    background-attachment: fixed;
+  }
+
+ 
+</style> -->
+
+
+<script>
+  "use strict";
+const tabs = document.querySelectorAll("[data-id]");
+const contents = document.querySelectorAll("[data-content]");
+let id = "0"; // Initialize id as a string
+
+tabs.forEach(function (tab) {
+  tab.addEventListener("click", function () {
+    tabs.forEach(function (tab) {
+      tab.classList.remove("active");
+    });
+    tab.classList.add("active");
+    id = tab.getAttribute("data-id");
+    contents.forEach(function (box) {
+      box.classList.add("hide");
+      if (box.getAttribute("data-content") === id) { // Use strict equality for string comparison
+        box.classList.remove("hide");
+        box.classList.add("show");
+      }
+    });
+  });
+});
+</script>
+
+<br><br><br><br><br><br><br><br>
+{% include 'footer.html' %}
